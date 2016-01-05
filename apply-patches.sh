@@ -1,8 +1,9 @@
+#!/bin/bash
+
 echo "Attempting to apply patches"
 cd staging/src
-for file in ../../HoseCraft/Patches/*.diff
+for file in ../../HoseCraft/Patches/*.*
 do
- # do something on "$file"
- git apply "../../HoseCraft/Patches/$file"
+    git apply $file
 done
 echo "Patches Applied?"
